@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            background-color: aquamarine;
+            width: 100px;
+            height: 75px;
+            border-radius: 100px 100px 9px 9px;
+            margin: 75px;
+        }
+        .left-eye{
+            background-color: black;
+            height: 15px;
+            width: 15px;
+            border-radius: 100px;
+            position: absolute;
+            left: 100px;
+            top: 120px;
+        }
+        .right-eye{
+            background-color: black;
+            height: 15px;
+            width: 15px;
+            border-radius: 100px;
+            position: absolute;
+            left: 150px;
+            top: 120px;
+        }
+        .body{
+            background-color: aquamarine;
+            width: 100px;
+            height: 125px;
+            border-radius: 8px 8px 100px 100px;
+            margin: 75px;
+            margin-top: -67px;
+        }
+        .left-hand{
+            background-color: black;
+            height: 65px;
+            width: 21px;
+            border-radius: 100px;
+            position: absolute;
+            left: 55px;
+            top: 175px;
+        }
+        .right-hand{
+            background-color: black;
+            height: 65px;
+            width: 21px;
+            border-radius: 100px;
+            position: absolute;
+            left: 189px;
+            top: 175px;
+        }
+        .left-leg{
+            background-color: aquamarine;
+            height: 65px;
+            width: 21px;
+            border-radius: 100px;
+            position: absolute;
+            left: 148px;
+            top: 250px;
+        }
+        .right-leg{
+            background-color: aquamarine;
+            height: 65px;
+            width: 21px;
+            border-radius: 100px;
+            position: absolute;
+            left: 100px;
+            top: 250px;
+        }
+        .robot:hover .head {
+  animation: movehead 1s infinite;
+}
+
+.robot:hover .body{
+  border-radius: 30%;
+  animation: movebody 2s infinite;
+}
+
+.robot:hover .left-hand {
+  animation: moveleft-hand 2s infinite;
+}
+
+.robot:hover .right-hand {
+  animation: moveright-hand 2s infinite;
+}
+
+.robot:hover .left-leg {
+  animation: moveleft-leg 2s infinite;
+}
+
+.robot:hover .right-leg {
+  animation: moveright-leg 2s infinite;
+}
+
+@keyframes movehead {
+  0% {
+    width: 100px;
+  }
+  
+ 
+
+  50% {
+    width: 125px;
+  }
+
+
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes moveleft-hand {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes moveright-hand {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes moveleft-leg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveright-leg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes movebody {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="robot">
+        <div class="head">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+        </div>
+        <div class="body"></div>
+        <div class="hands">
+            <span class="left-hand"></span>
+            <span class="right-hand"></span>
+        </div>
+        <div class="legs">
+            <span class="left-leg"></span>
+            <span class="right-leg"></span>
+        </div>
+    </div>
+</body>
+</html>
